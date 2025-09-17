@@ -24,8 +24,39 @@ body{
     color: #002765;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
+.progress-ring{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0; /*prevent shrink*/
+}
+.progress-ring-bg{
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 4;
+}
+.progress-ring-progress{
+    fill: none;
+    stroke: #002765;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 138; /* circumference */
+    stroke-dashoffset: 138;
+    transition: stroke-dashoffset 0.5s ease;
+}
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #002765;
+}
+
 .row{
     display: flex;
     align-items: center;
