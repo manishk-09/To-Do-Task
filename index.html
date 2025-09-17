@@ -10,7 +10,17 @@
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List📝</h2>
+            <h2>
+                <span class="title">To-Do List 📝</span>
+                <div class="progress-ring">
+                    <svg width="50" height="50">
+                        <circle class="progress-ring-bg" cx="25" cy="25" r="22"/>
+                        <circle class="progress-ring-progress" cx="25" cy="25" r="22"/>
+                    </svg>
+                    <span id="progress-text">0%</span>
+                </div>
+            </h2>
+
             <div class="row">
                 <input type="text" placeholder="write your task" id="input-box">
                 <button onclick="addTask()">Add</button>
